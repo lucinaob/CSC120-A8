@@ -1,5 +1,5 @@
-Use this file to record your reflection on this assignment.
+For this assignment, I decided to make a game walking someone through their first day at Smith. My Main class is this game, including a few attributes that keep track of the player's name, their points (in the form of social aptitude), and colored text to make the game more visually appealing/fun. 
 
-- Tell me about your class! What does it represent?
-- What additional methods (if any) did you implement alongside those listed in the interface?
-- What worked, what didn't, what advice would you give someone taking this course in the future?
+Each method in the contract is a small step in the game. To keep this assignment simple and manageable, each method is relatively straightforward and only used a few (< 3) times. This allowed me to meet the requirements without sinking too much time into the assignment or running into creative/coding errors. Main first asks the player for their name, before getting into the introduction of the game and the first scene. I decided to make the game focused on interactions, which meant a lot of the game is focused on text and response, rather than logic or anything like that. There is the opportunity for the player to go through and run into every method in the contract within one round/attempt. Some of these methods are simply there to tell you that you cannot use them, such as `undo` and `fly`. This felt like a cop-out but also felt true to the game I was making. I told myself that as long as I included everything, I was doing the right thing, and there was no need to go overboard. I think this approach worked, as it kept me from getting side-tracked trying to come up with or debug superfluous or over-complicated methods. I would recommend this approach to anyone taking this class.
+
+I did not implement any new methods on top of what was required of me.
