@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class Main {
+public class Main implements Contract {
 
     //Attributes of the Main class
     int socialAptitude = 0;
@@ -23,7 +23,7 @@ public class Main {
     /**
      * Undo method
      */
-    void undo(){
+    public void undo(){
         System.out.println("There is no undoing. Learn to live with the consequences of your actions.");
     }
 
@@ -31,7 +31,7 @@ public class Main {
      * Examine method
      * @param item - item to examine
      */
-    void examine(String item){
+    public void examine(String item){
         //Message about examining the item
         System.out.println("Now examining a " + item + "...");
         //A random number is chosen from 1-3
@@ -44,7 +44,7 @@ public class Main {
      * Method to grab an item
      * @param item - item to be grabbed
      */
-    void grab(String item){
+    public void grab(String item){
         //Message that an item has been grabbed
         System.out.println("You now have a " + item + "!");
     }
@@ -54,7 +54,7 @@ public class Main {
      * @param direction - direction to walk
      * @return - boolean if walking is possible
      */
-    boolean walk(String direction){
+    public boolean walk(String direction){
         //Message that character is walking
         System.out.println("🚶 Now walking " + direction + " ... 🚶");
         return true;
@@ -67,7 +67,7 @@ public class Main {
      * @param y
      * @return - boolean if flying is possible
      */
-    boolean fly(int x, int y){
+    public boolean fly(int x, int y){
         //Message that you can't fly
         System.out.println("Sike. You can't fly — this is college, not fantasy land.");
         //Return that flying is not possible
@@ -78,7 +78,7 @@ public class Main {
      * Shrink method
      * @return - social aptitude after shrinking
      */
-    Number shrink(){
+    public Number shrink(){
         //Reduce social aptitude levels by 1-3
         socialAptitude -= rand.nextInt(1, 3);
         //Return this shrunken level
@@ -88,7 +88,7 @@ public class Main {
     /**
      * Rest method
      */
-    void rest(){
+    public void rest(){
         //Print rest message
         System.out.println("Let sleep wash over you... 😴");
         //Exit program
@@ -100,16 +100,16 @@ public class Main {
      * @param item - item to drop
      * @return - text to return
      */
-    String drop(String item){
+    public String drop(String item){
         //Return that an item is being dropped
         return "Unloading " + item + "... ";
     }
 
     /**
      * Grow method
-     * @return
+     * @return - returns increased social aptitude
      */
-    Number grow(){
+    public Number grow(){
         //Increase social aptitude level by between 1 and 4 points
         socialAptitude += rand.nextInt(1, 4);
         //Return this increased level
@@ -120,7 +120,7 @@ public class Main {
      * Use method
      * @param item - item to use
      */
-    void use(String item){
+    public void use(String item){
         //Print that an item is being used
         System.out.println("Using " + item + "...");
     }
